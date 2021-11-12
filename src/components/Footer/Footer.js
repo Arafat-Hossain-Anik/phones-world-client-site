@@ -13,7 +13,7 @@ const Footer = () => {
             <div className="main">
                 <div className="footer">
                     <div className="single-footer">
-                        <h2 className='mt-5'>Budget Travel Point</h2>
+                        <h2 className='mt-5'>Phone's World</h2>
                         <div className="footer-social">
                             <a href="https://www.facebook.com/"><i className="fab fa-facebook"></i></a>
                             <a href="https://twitter.com/"><i className="fab fa-twitter"></i></a>

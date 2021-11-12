@@ -42,14 +42,6 @@ const Header = () => {
                 >
                   Dashboard
                 </Nav.Link>
-                <Nav.Link
-                  as={HashLink}
-                  to="/addedservice"
-                  className="text-white fw-bold"
-                >
-                  Add Service
-                </Nav.Link>
-
                 <NavDropdown
                   title={
                     <img
