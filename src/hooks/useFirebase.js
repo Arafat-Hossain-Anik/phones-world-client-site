@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import initializeAuthentication from "../Firebase/firebase.init";
+// import axios from "axios";
 
 initializeAuthentication();
 const useFirebase = () => {
@@ -20,6 +21,9 @@ const useFirebase = () => {
                 // Signed in 
                 const user = result.user;
                 console.log(user);
+                const newUser = { email };
+                // storeUser(newUser);
+                console.log(newUser);
                 // ...
             })
             .catch((error) => {
@@ -62,6 +66,14 @@ const useFirebase = () => {
             setLoading(false)
         })
     }, [])
+    // const storeUser = (user) => {
+    //     axios.post('http://localhost:5000/users/', user)
+    //         .then(res => {
+    //             if (res.data.insertedId) {
+    //                 alert('Added successfully');
+    //             }
+    //         })
+    // }
     return {
         user,
         error,

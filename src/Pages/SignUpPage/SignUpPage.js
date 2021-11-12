@@ -12,7 +12,8 @@ const SignUpPage = () => {
     const [password, setPassword] = useState('');
     const handleRegistration = (e) => {
         e.preventDefault();
-        // console.log("reg is clicked");
+        console.log("reg is clicked", email, password);
+        // console.log(createEmailPasswordUser);
         createEmailPasswordUser(email, password);
     }
     const handleEmailChanged = (e) => {
