@@ -16,13 +16,6 @@ const Login = () => {
         e.preventDefault();
         // console.log("reg is clicked");
         signInWithEmailPassword(email, password);
-        // .then(result => {
-        //     history.push(redirect_uri);
-        //     console.log(result);
-        // })
-        // .catch(error => {
-        //     console.log(error.message);
-        // })
     }
     const handleGoogleLogin = () => {
         singInUsingGoogle()

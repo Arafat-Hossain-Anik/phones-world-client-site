@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
@@ -8,22 +8,18 @@ import './SignUpPage.css';
 const SignUpPage = () => {
     const { contexts } = useAuth();
     const { createEmailPasswordUser } = contexts;
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const emailRef = useRef();
+    const passRef = useRef();
+    const nameRef = useRef();
     const handleRegistration = (e) => {
+        const email = emailRef.current.value;
+        const password = passRef.current.value;
+        const name = nameRef.current.value;
         e.preventDefault();
         console.log("reg is clicked", email, password);
         // console.log(createEmailPasswordUser);
-        createEmailPasswordUser(email, password);
+        createEmailPasswordUser(name, email, password);
     }
-    const handleEmailChanged = (e) => {
-        setEmail(e.target.value);
-    }
-    const handlePasswordChanged = (e) => {
-        setPassword(e.target.value);
-    }
-    // console.log(email);
-    // console.log(password);
     return (
         // sign up form
         <>
@@ -33,9 +29,11 @@ const SignUpPage = () => {
                     <div className="col-12 col-md-6 input-field-container roundeds">
                         <h2 className="fw-bold">Sign Up</h2>
                         <form onSubmit={handleRegistration}>
-                            <input onBlur={handleEmailChanged} className="input-field" type="text" placeholder="E-mail" required />
+                            <input ref={nameRef} className="input-field" type="text" placeholder="Name" required />
                             <br />
-                            <input onBlur={handlePasswordChanged} className="input-field" type="password" placeholder="Password" required />
+                            <input ref={emailRef} className="input-field" type="text" placeholder="E-mail" required />
+                            <br />
+                            <input ref={passRef} className="input-field" type="password" placeholder="Password" required />
                             <br />
                             {/* sign up and cancel button */}
                             <div className="clearfix text-center">

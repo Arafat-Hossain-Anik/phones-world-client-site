@@ -37,13 +37,6 @@ const Header = () => {
               <>
                 <Nav.Link
                   as={HashLink}
-                  to="/myBooking"
-                  className="text-white fw-bold"
-                >
-                  My Orders
-                </Nav.Link>
-                <Nav.Link
-                  as={HashLink}
                   to="/dashboard"
                   className="text-white fw-bold"
                 >

@@ -14,6 +14,7 @@ import ManageOrder from '../ManageOrder/ManageOrder';
 import AddReview from '../AddReview/AddReview';
 import Pay from '../Payment/Pay';
 import ManageProduct from '../ManageProduct/ManageProduct';
+import MakeAdmin from '../MakeAdmin/MakeAdmin';
 
 const Body = () => {
     let { path, url } = useRouteMatch();
@@ -25,20 +26,24 @@ const Body = () => {
 
                 <div className='dashboard-header'>
                     <Link style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }} to={`/home`}>Home</Link>
+                    {!contexts.admin ?
+                        <>
+                            <Link style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }} to={`${url}/myBooking`}>My Order</Link>
 
-                    <Link style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }} to={`${url}/myBooking`}>My Order</Link>
+                            <Link style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }} to={`${url}/pay`}>Pay</Link>
 
-                    <Link style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }} to={`${url}/pay`}>Pay</Link>
+                            <Link style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }} to={`${url}/addreview`}>Review</Link>
+                        </> :
+                        <>
+                            <Link style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }} to={`${url}/allorders`}>Manage All Orders</Link>
 
-                    <Link style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }} to={`${url}/addreview`}>Review</Link>
+                            <Link style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }} to={`${url}/manageproduct`}>Manage Products</Link>
 
-                    <Link style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }} to={`${url}/allorders`}>Manage All Orders</Link>
+                            <Link style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }} to={`${url}/addedservice`}>Add Product</Link>
 
-                    <Link style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }} to={`${url}/manageproduct`}>Manage Products</Link>
-
-                    <Link style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }} to={`${url}/addedservice`}>Add Product</Link>
-
-                    <Link style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }} to={`${url}/makeAdmin`}>Make Admin</Link>
+                            <Link style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }} to={`${url}/makeAdmin`}>Make Admin</Link>
+                        </>
+                    }
                     {!contexts.user.email ? (
                         <>
                             <Nav.Link as={NavLink} to="/signup" className="text-white">
@@ -94,6 +99,9 @@ const Body = () => {
                     </Route>
                     <Route path={`${path}/manageproduct`}>
                         <ManageProduct></ManageProduct>
+                    </Route>
+                    <Route path={`${path}/makeAdmin`}>
+                        <MakeAdmin></MakeAdmin>
                     </Route>
                 </Switch>
             </div>
