@@ -8,6 +8,7 @@ import { HashLink } from 'react-router-hash-link';
 
 const Header = () => {
   const { contexts } = useAuth();
+  const defImg = 'https://randomuser.me/api/portraits/men/60.jpg';
   return (
     <>
       <Navbar className='header' variant="dark" sticky='top' collapseOnSelect expand="lg">
@@ -23,10 +24,13 @@ const Header = () => {
                 <Link style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }} to='/allproducts'>All Products</Link>
               </Nav.Link>
             </Nav>
-            {!contexts.user.displayName ? (
+            {!contexts.user.email ? (
               <>
                 <Nav.Link as={NavLink} to="/signup" className="text-white">
                   Sign Up
+                </Nav.Link>
+                <Nav.Link as={NavLink} to="/login" className="text-white">
+                  Login
                 </Nav.Link>
               </>
             ) : (
@@ -60,7 +64,7 @@ const Header = () => {
                         width: "45px",
                         borderRadius: "50%",
                       }}
-                      src={contexts.user.photoURL}
+                      src={contexts.user.photoURL ? contexts.user.photoURL : defImg}
                       alt=""
                     />
                   }

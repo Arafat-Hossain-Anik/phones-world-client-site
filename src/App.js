@@ -16,6 +16,8 @@ import Thanks from './Pages/Thanks/Thanks';
 import Form from './Pages/Form/Form';
 import AddedService from './components/AddedService/AddedService';
 import Body from './components/DashBoard/Body/Body';
+import Login from './Pages/Login/Login';
+import SignUpPage from './Pages/SignUpPage/SignUpPage';
 function App() {
   return (
     <div className="">
@@ -42,6 +44,12 @@ function App() {
             </PrivateRoute>
             <Route path='/signup'>
               <SignUp></SignUp>
+            </Route>
+            <Route path='/login'>
+              <Login></Login>
+            </Route>
+            <Route path='/register'>
+              <SignUpPage></SignUpPage>
             </Route>
             <Route path='/thanks'>
               <Thanks> </Thanks>
