@@ -14,7 +14,7 @@ const Form = () => {
     const [service, setService] = useState({})
     const id = localStorage.getItem('orders');
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${id}`)
+        fetch(`https://hidden-coast-67939.herokuapp.com/services/${id}`)
             .then(res => res.json())
             .then(data => setService(data))
     }, [id])

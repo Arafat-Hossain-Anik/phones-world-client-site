@@ -6,7 +6,7 @@ const AddReview = () => {
 
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:5000/reviews/', data)
+        axios.post('https://hidden-coast-67939.herokuapp.com/reviews/', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Added successfully');

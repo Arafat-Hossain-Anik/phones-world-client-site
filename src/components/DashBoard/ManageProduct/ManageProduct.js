@@ -3,14 +3,14 @@ import { Col, Container, Row } from 'react-bootstrap';
 const ManageProduct = () => {
     const [allProducts, setAllProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://hidden-coast-67939.herokuapp.com/services')
             .then(result => result.json())
             .then(data => setAllProducts(data))
     }, []);
     const removeItem = (id) => {
         const areSure = window.confirm('Are You Sure Want To Delete?');
         if (areSure) {
-            fetch(`http://localhost:5000/products/${id}`, {
+            fetch(`https://hidden-coast-67939.herokuapp.com/products/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

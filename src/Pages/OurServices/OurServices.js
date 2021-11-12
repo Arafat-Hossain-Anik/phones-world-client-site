@@ -7,7 +7,7 @@ import './OurServices.css';
 const OurServices = () => {
     const [services, setOurServices] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://hidden-coast-67939.herokuapp.com/services')
             .then(result => result.json())
             .then(data => setOurServices(data))
     }, []);
