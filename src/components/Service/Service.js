@@ -1,14 +1,10 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import useAuth from '../../hooks/useAuth';
-import useFirebase from '../../hooks/useFirebase';
 import Rating from 'react-rating';
 
 const Service = (props) => {
     const { service } = props;
-    const { addToCart } = useAuth();
-    const { user } = useFirebase();
     return (
         <div key={service.id}>
             <div className="col">
@@ -37,17 +33,8 @@ const Service = (props) => {
                             </Row>
                             <Row><hr /></Row>
                             <Row className='booking'>
-                                <Col>
-                                    {
-                                        user.email ?
-                                            <button onClick={() => addToCart(service)}><i className="far fa-flag"></i> Buy Now</button> :
-                                            <Link to={`/signup`}>
-                                                <button>Buy Now <i className="fas fa-info-circle"></i></button>
-                                            </Link>
-                                    }
-                                </Col>
-                                <Col className='details-btn'> <Link to={`/more/${service._id}`}>
-                                    <button>View Details <i className="fas fa-info-circle"></i></button>
+                                <Col className='details-btn text-center'> <Link to={`/more/${service._id}`}>
+                                    <button>Buy Now <i className="fas fa-info-circle"></i></button>
                                 </Link>
                                 </Col>
                             </Row>

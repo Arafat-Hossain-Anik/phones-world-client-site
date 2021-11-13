@@ -39,6 +39,9 @@ function App() {
             <PrivateRoute path='/more/:id'>
               <More></More>
             </PrivateRoute>
+            <Route path='/allproducts'>
+              <OurServices></OurServices>
+            </Route>
             <Route path='/signup'>
               <SignUp></SignUp>
             </Route>

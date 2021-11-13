@@ -46,9 +46,9 @@ const Body = () => {
                     }
                     {!contexts.user.email ? (
                         <>
-                            <Nav.Link as={NavLink} to="/signup" className="text-white">
+                            {/* <Nav.Link as={NavLink} to="/signup" className="text-white">
                                 Sign Up
-                            </Nav.Link>
+                            </Nav.Link> */}
                             <Nav.Link as={NavLink} to="/login" className="text-white">
                                 Log in
                             </Nav.Link>
@@ -80,7 +80,10 @@ const Body = () => {
                 </div>
                 <Switch>
                     <Route exact path={path}>
-                        <h3>Please select a topic.</h3>
+                        <div className='fw-bold text-center'>
+                            <h1 className='mt-5'>Welcome To Phone's World Dashboard</h1>
+                            <h4>Please select an option to view pages.</h4>
+                        </div>
                     </Route>
                     <Route path={`${path}/myBooking`}>
                         <MyBooking></MyBooking>

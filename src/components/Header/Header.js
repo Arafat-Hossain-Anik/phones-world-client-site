@@ -26,9 +26,9 @@ const Header = () => {
             </Nav>
             {!contexts.user.email ? (
               <>
-                <Nav.Link as={NavLink} to="/signup" className="text-white">
+                {/* <Nav.Link as={NavLink} to="/signup" className="text-white">
                   Sign Up
-                </Nav.Link>
+                </Nav.Link> */}
                 <Nav.Link as={NavLink} to="/login" className="text-white">
                   Login
                 </Nav.Link>

@@ -45,12 +45,12 @@ const Footer = () => {
                             <li><i className="fas fa-map-marker-alt"></i> Mohammadpur, Dhaka</li>
                             <li><i className="fas fa-mobile-alt"></i>     +880112556665</li>
                             <li><i className="far fa-envelope"></i>     dummy@gmail.com</li>
-                            <li><i className="fas fa-globe-europe"></i>     www.budget-travel.com</li>
+                            <li><i className="fas fa-globe-europe"></i>     www.phones-world.com</li>
                         </ul>
                     </div>
                 </div><hr />
                 <div className="copy">
-                    <p style={{ color: 'white' }}><small>&copy; 2021 all rights reserved to Budget Travel Point</small></p>
+                    <p style={{ color: 'white' }}><small>&copy; 2021 all rights reserved to Phones World</small></p>
                 </div>
             </div>
         </footer>

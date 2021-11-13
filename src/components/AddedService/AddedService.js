@@ -24,9 +24,9 @@ const AddedService = () => {
                     <input {...register("name", { required: true, maxLength: 20 })} placeholder='write name' />
                     <textarea {...register("description")} placeholder='description' />
                     <input type="number" {...register("price")} placeholder='added price' />
-                    <input type="number" {...register("rating")} placeholder='added rating' />
+                    <input type="text" {...register("rating")} placeholder='added rating' />
                     <input {...register("img")} placeholder='image url' />
-                    <input className='sub' style={{ background: '#161E54' }} type="submit" />
+                    <input className='sub fw-bold' style={{ background: '#161E54', color: 'white', padding: '8px 0' }} type="submit" />
                 </form>
             </div>
         </>
