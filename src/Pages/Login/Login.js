@@ -6,7 +6,7 @@ import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
     const { contexts } = useAuth();
-    const { singInUsingGoogle, signInWithEmailPassword, error, user } = contexts;
+    const { singInUsingGoogle, signInWithEmailPassword, setError, error, user, setLoading } = contexts;
     const location = useLocation();
     const history = useHistory();
     const redirect_uri = location.state?.from || '/home';
@@ -15,7 +15,19 @@ const Login = () => {
     const handleLogin = (e) => {
         e.preventDefault();
         // console.log("reg is clicked");
-        signInWithEmailPassword(email, password);
+        signInWithEmailPassword(email, password)
+            .then((result) => {
+                // Signed in 
+                const user = result.user;
+                console.log(user);
+                setError('');
+                history.push(redirect_uri);
+            })
+            .catch((error) => {
+                // const errorCode = error.code;
+                setError(error.message);
+            })
+            .finally(() => setLoading(false));
     }
     const handleGoogleLogin = () => {
         singInUsingGoogle()

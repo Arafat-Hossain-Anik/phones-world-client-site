@@ -38,18 +38,7 @@ const useFirebase = () => {
         // ..
     }
     const signInWithEmailPassword = (email, password) => {
-        signInWithEmailAndPassword(auth, email, password)
-            .then((result) => {
-                // Signed in 
-                const user = result.user;
-                console.log(user);
-                setError('');
-            })
-            .catch((error) => {
-                // const errorCode = error.code;
-                setError(error.message);
-            })
-            .finally(() => setLoading(false));
+        return signInWithEmailAndPassword(auth, email, password);
     }
 
     const logOut = () => {
@@ -90,6 +79,8 @@ const useFirebase = () => {
         signInWithEmailPassword,
         singInUsingGoogle,
         logOut,
+        setError,
+        setLoading,
         loading
     }
 }

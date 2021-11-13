@@ -39,7 +39,7 @@ const ManageProduct = () => {
 
                                 // <h1>{product.name}</h1>
                                 <Container key={product._id} style={{ paddingTop: '50px' }}>
-                                    <Row key={product._id}>
+                                    <Row>
                                         <Col>
                                             <img src={product.img} className="card-img-top h-100 w-100 " alt="" />
                                         </Col>
