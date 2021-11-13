@@ -15,6 +15,7 @@ import AddReview from '../AddReview/AddReview';
 import Pay from '../Payment/Pay';
 import ManageProduct from '../ManageProduct/ManageProduct';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
+import AdminRoute from '../../AdminRoute/AdminRoute';
 
 const Body = () => {
     let { path, url } = useRouteMatch();
@@ -88,24 +89,24 @@ const Body = () => {
                     <Route path={`${path}/myBooking`}>
                         <MyBooking></MyBooking>
                     </Route>
-                    <Route path={`${path}/addedservice`}>
+                    <AdminRoute path={`${path}/addedservice`}>
                         <AddedService></AddedService>
-                    </Route>
-                    <Route path={`${path}/allorders`}>
+                    </AdminRoute>
+                    <AdminRoute path={`${path}/allorders`}>
                         <ManageOrder></ManageOrder>
-                    </Route>
+                    </AdminRoute>
                     <Route path={`${path}/addreview`}>
                         <AddReview></AddReview>
                     </Route>
                     <Route path={`${path}/pay`}>
                         <Pay></Pay>
                     </Route>
-                    <Route path={`${path}/manageproduct`}>
+                    <AdminRoute path={`${path}/manageproduct`}>
                         <ManageProduct></ManageProduct>
-                    </Route>
-                    <Route path={`${path}/makeAdmin`}>
+                    </AdminRoute>
+                    <AdminRoute path={`${path}/makeAdmin`}>
                         <MakeAdmin></MakeAdmin>
-                    </Route>
+                    </AdminRoute>
                 </Switch>
             </div>
         </div>
