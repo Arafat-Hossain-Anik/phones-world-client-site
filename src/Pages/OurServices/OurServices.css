@@ -18,9 +18,10 @@
     border: none;
     padding: 7px 15px;
     transition: background .8s;
+    border: 1px solid gray;
 }
 .booking button:hover{
-    border: 2px solid gray;
+    
     color: rgb(5, 0, 71);
     background: #fff;
 
