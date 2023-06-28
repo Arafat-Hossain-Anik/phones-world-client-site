@@ -6,7 +6,7 @@ const Part = () => {
   return (
     <>
       <div>
-        <h1 className='text-center '><b>WHY US</b></h1>
+        <h1 className='text-center mt-5'><b>Why Us</b></h1>
       </div>
       <CardGroup>
         <Card className='m-3 part-card'>

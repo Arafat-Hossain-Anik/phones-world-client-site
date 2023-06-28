@@ -59,12 +59,12 @@ const useFirebase = () => {
         })
     }, []);
     useEffect(() => {
-        fetch(`https://hidden-coast-67939.herokuapp.com/users/${user.email}`)
+        fetch(`http://localhost:5000/users/${user.email}`)
             .then(res => res.json())
             .then(res => setAdmin(res.admin));
     }, [user.email])
     const storeUser = (user) => {
-        axios.post('https://hidden-coast-67939.herokuapp.com/users/', user)
+        axios.post('http://localhost:5000/users/', user)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Added successfully');

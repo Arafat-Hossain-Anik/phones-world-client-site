@@ -5,14 +5,9 @@ import './Footer.css';
 const Footer = () => {
     return (
         <footer className='footer-area text-white'>
-            <div className="footer-wave-box">
-                <div className="footer-wave footer-animation">
-
-                </div>
-            </div>
             <div className="main">
-                <div className="footer">
-                    <div className="single-footer">
+                <div className="footer row row-col-1 row-col-md-2 row-col-lg-4 justify-contect-evenly">
+                    <div className="col single-footer">
                         <h2 className='mt-5'>Phone's World</h2>
                         <div className="footer-social">
                             <a href="https://www.facebook.com/"><i className="fab fa-facebook"></i></a>
@@ -21,7 +16,7 @@ const Footer = () => {
                             <a href="https://www.linkedin.com/"><i className="fab fa-linkedin"></i></a>
                         </div>
                     </div>
-                    <div className="single-footer">
+                    <div className="col single-footer">
                         <h4>Main Menu</h4>
                         <ul>
                             <li><a href="/home" ><i className="fas fa-chevron-right"></i>Home</a></li>
@@ -31,7 +26,7 @@ const Footer = () => {
                             <li><a href="/home"><i className="fas fa-chevron-right"></i>Contact Us</a></li>
                         </ul>
                     </div>
-                    <div className="single-footer">
+                    <div className="col single-footer">
                         <h4>Quick Links</h4>
                         <ul>
                             <li><a href="/"><i className="fas fa-chevron-right"></i>Privacy</a></li>
@@ -39,7 +34,7 @@ const Footer = () => {
                             <li><a href="/"><i className="fas fa-chevron-right"></i>Disclaim</a></li>
                         </ul>
                     </div>
-                    <div className="single-footer">
+                    <div className="col single-footer">
                         <h4>Contact Us</h4>
                         <ul>
                             <li><i className="fas fa-map-marker-alt"></i> Mohammadpur, Dhaka</li>
@@ -48,9 +43,10 @@ const Footer = () => {
                             <li><i className="fas fa-globe-europe"></i>     www.phones-world.com</li>
                         </ul>
                     </div>
-                </div><hr />
-                <div className="copy">
-                    <p style={{ color: 'white' }}><small>&copy; 2021 all rights reserved to Phones World</small></p>
+                </div>
+                <hr />
+                <div className="copyright">
+                    <p style={{ color: 'white' }}><small>&copy; 2023 All rights reserved to Phones World</small></p>
                 </div>
             </div>
         </footer>

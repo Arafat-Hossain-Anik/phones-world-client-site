@@ -1,9 +1,23 @@
 /* banner heading design */
-.banner-heading{
+.banner-heading {
     font-size: 56px;
     line-height: 70px;
 }
+
 /* padding top  */
-.padding-top{
+.padding-top {
     padding-top: 6rem;
+}
+
+.carousel .carousel-item {
+    height: 600px;
+    background-color: aqua;
+}
+
+.carousel-indicators button {
+    margin: 10px !important;
+    border-radius: 50%;
+    width: 10px !important;
+    height: 10px !important;
+    background-color: #404040;
 }

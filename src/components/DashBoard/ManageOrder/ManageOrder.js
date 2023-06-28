@@ -7,7 +7,7 @@ const ManageOrder = () => {
     const [allOrders, setAllOrders] = useState([]);
     const [confirm, setConfirm] = useState();
     const confirmOrder = (order) => {
-        fetch('https://hidden-coast-67939.herokuapp.com/orders', {
+        fetch('http://localhost:5000/orders', {
             method: 'put',
             headers: {
                 'content-type': 'application/json'
@@ -23,7 +23,7 @@ const ManageOrder = () => {
         console.log('confirm clicked');
     }
     useEffect(() => {
-        fetch('https://hidden-coast-67939.herokuapp.com/orders')
+        fetch('http://localhost:5000/orders')
             .then(res => res.json())
             .then(data => setAllOrders(data))
     }, [confirm])
