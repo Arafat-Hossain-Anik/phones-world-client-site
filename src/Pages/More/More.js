@@ -13,7 +13,7 @@ const More = () => {
   // const {booking} = useAuth();
   const [service, setService] = useState({})
   useEffect(() => {
-    fetch(`http://localhost:5000/services/${id}`)
+    fetch(`https://phones-world-server-site.onrender.com/services/${id}`)
       .then(res => res.json())
       .then(data => setService(data))
   }, [])

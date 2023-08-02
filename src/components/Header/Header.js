@@ -21,7 +21,7 @@ const Header = () => {
                 <Link style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }} to='/home'>Home</Link>
               </Nav.Link>
               <Nav.Link>
-                <Link style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }} to='/allproducts'>All Products</Link>
+                <Link style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }} to='/allproducts'>Latest Phones</Link>
               </Nav.Link>
             </Nav>
             {!contexts.user.email ? (
@@ -38,7 +38,7 @@ const Header = () => {
                 <Nav.Link
                   as={HashLink}
                   to="/dashboard"
-                  className="text-white fw-bold"
+                  className="text-white fw-bold me-2"
                 >
                   Dashboard
                 </Nav.Link>
@@ -46,7 +46,7 @@ const Header = () => {
                   title={
                     <img
                       style={{
-                        width: "45px",
+                        width: "40px",
                         borderRadius: "50%",
                       }}
                       src={contexts.user.photoURL ? contexts.user.photoURL : defImg}

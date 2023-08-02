@@ -5,7 +5,8 @@ import GalaxyImg from '../../images/banner/galaxy.png';
 import { Link } from 'react-router-dom';
 const Banner = () => {
     return (
-        <div className="container mt-5">
+        // <div className="container mt-5">
+        <div className="">
             <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -13,15 +14,15 @@ const Banner = () => {
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
                 <div className="carousel-inner">
-                    <div className="carousel-item rounded active">
+                    <div className="carousel-item active">
                         <div className="row">
                             <div className="col-md-6">
-                                <div className='ms-5'>
+                                <div className="ms-5">
                                     <h1 className='banner-heading fw-bold'>Baishakhi Super hot Sale</h1>
                                     <h2 className='text-danger fw-bold'>UP TO 15% OFF</h2>
                                     <h3 className='banner-sub-heading'>Under Favourable Phone's World</h3>
                                     <br />
-                                    <Link className='btn btn-outline-danger mt-2 fw-bold' to={`/allproducts`}>
+                                    <Link className='btn btn-danger mt-2 fw-bold' to={`/allproducts`}>
                                         Buy Now
                                     </Link>
                                 </div>
@@ -33,17 +34,17 @@ const Banner = () => {
                     </div>
                     <div className="carousel-item rounded">
                         <div className="row">
-                            <div className="col-md-6">
+                            <div className="col-md-7">
                                 <div className='ms-5'>
                                     <h1 className='banner-heading fw-bold'>Exclusive Launch With <br /><span className='text-danger'>Mind Blowing Discount</span></h1>
                                     <h3 className='banner-sub-heading'>Under Favourable Phone's World</h3>
                                     <br />
-                                    <Link className='btn btn-outline-danger mt-2 fw-bold' to={`/allproducts`}>
+                                    <Link className='btn btn-danger mt-2 fw-bold' to={`/allproducts`}>
                                         Buy Now
                                     </Link>
                                 </div>
                             </div>
-                            <div className="col-md-6 text-center">
+                            <div className="col-md-5 text-center">
                                 <img className='banner-img img-fluid' src={GalaxyImg} alt="" />
                             </div>
                         </div>
@@ -56,7 +57,7 @@ const Banner = () => {
                                     <h2 className='text-danger fw-bold'>UP TO 30% OFF</h2>
                                     <h3 className='banner-sub-heading'>Under Favourable Phone's World</h3>
                                     <br />
-                                    <Link className='btn btn-outline-danger mt-2 fw-bold' to={`/allproducts`}>
+                                    <Link className='btn btn-danger mt-2 fw-bold' to={`/allproducts`}>
                                         Buy Now
                                     </Link>
                                 </div>

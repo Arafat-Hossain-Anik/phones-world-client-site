@@ -4,7 +4,7 @@ import ShowReview from '../ShowReview/ShowReview';
 const ShowReviews = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://phones-world-server-site.onrender.com/reviews')
             .then(res => res.json())
             .then(data => setReviews(data));
     }, [])

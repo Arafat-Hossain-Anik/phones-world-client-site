@@ -4,7 +4,7 @@ import Blog from './Blog';
 const Blogs = () => {
     const [Blogs, setBlogs] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/blog')
+        fetch('https://phones-world-server-site.onrender.com/blog')
             .then(result => result.json())
             .then(data => setBlogs(data))
     }, [])

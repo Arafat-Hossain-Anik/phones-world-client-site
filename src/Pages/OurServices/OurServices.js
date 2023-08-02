@@ -6,7 +6,7 @@ import Service from '../../components/Service/Service';
 const OurServices = () => {
     const [services, setOurServices] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://phones-world-server-site.onrender.com/services')
             .then(result => result.json())
             .then(data => setOurServices(data))
     }, []);

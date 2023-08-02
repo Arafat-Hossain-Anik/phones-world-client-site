@@ -14,7 +14,7 @@ const Form = () => {
     const [service, setService] = useState({})
     const id = localStorage.getItem('orders');
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${id}`)
+        fetch(`https://phones-world-server-site.onrender.com/services/${id}`)
             .then(res => res.json())
             .then(data => setService(data))
     }, [id])

@@ -8,7 +8,7 @@ const AddedService = () => {
 
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:5000/services/', data)
+        axios.post('https://phones-world-server-site.onrender.com/services/', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Added successfully');
@@ -17,19 +17,19 @@ const AddedService = () => {
             })
     }
     return (
-        <>
-            <div className='add-service pb-5' style={{ height: '50vh' }}>
-                <h2 className='text-center p-3 fw-bold text-dark'>Add New Place</h2>
+        <div className='body-banner'>
+            <div className='add-service pt-5' style={{ height: '50vh' }}>
+                <h2 className='text-center fs-1 p-3 fw-bold text-dark text-shadow'>Add New Product</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <input {...register("name", { required: true, maxLength: 20 })} placeholder='write name' />
-                    <textarea {...register("description")} placeholder='description' />
-                    <input type="number" {...register("price")} placeholder='added price' />
-                    <input type="text" {...register("rating")} placeholder='added rating' />
-                    <input {...register("img")} placeholder='image url' />
-                    <input className='sub fw-bold' style={{ background: '#161E54', color: 'white', padding: '8px 0' }} type="submit" />
+                    <input className="form-control" {...register("name", { required: true, maxLength: 20 })} placeholder='Product name' />
+                    <textarea className="form-control" {...register("description")} placeholder='Product description' style={{ width: "40%" }} />
+                    <input className="form-control" type="number" {...register("price")} placeholder='Product Price' />
+                    <input className="form-control" type="text" {...register("rating")} placeholder='Product Rating' />
+                    <input className="form-control" {...register("img")} placeholder='Product Image url' />
+                    <input className='btn btn-success' style={{ color: 'white', padding: '8px 0' }} type="submit" />
                 </form>
             </div>
-        </>
+        </div>
     );
 };
 

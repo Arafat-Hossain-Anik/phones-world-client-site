@@ -81,9 +81,11 @@ const Body = () => {
                 </div>
                 <Switch>
                     <Route exact path={path}>
-                        <div className='fw-bold text-center'>
-                            <h1 className='mt-5'>Welcome To Phone's World Dashboard</h1>
-                            <h4>Please select an option to view pages.</h4>
+                        <div className='fw-bold text-center body-banner'>
+                            <div className='d-flex justify-content-center align-items-center flex-column body-banner-text-container'>
+                                <h1 className='banner-head'>Welcome To Phone's World Dashboard</h1>
+                                <h4 className='banner-sub-head'>Please select an option to view pages.</h4>
+                            </div>
                         </div>
                     </Route>
                     <Route path={`${path}/myBooking`}>

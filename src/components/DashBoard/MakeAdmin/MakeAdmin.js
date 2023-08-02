@@ -5,7 +5,7 @@ const MakeAdmin = () => {
     const handleSubmit = (e) => {
         const email = emailRef.current.value;
         const adminMail = { email };
-        fetch('http://localhost:5000/users', {
+        fetch('https://phones-world-server-site.onrender.com/users', {
             method: 'put',
             headers: {
                 'content-type': 'application/json'
@@ -22,12 +22,18 @@ const MakeAdmin = () => {
         e.preventDefault();
     }
     return (
-        <div>
-            <h1 className='text-center fw-bold mt-5'>Add Admin</h1>
-            <form className='text-center mt-4' onSubmit={handleSubmit}>
-                <input className="input-field w-50" type="email" ref={emailRef} style={{ background: '#dbdbdb', border: '1px solid gray' }} placeholder='E-mail Please' />
-                <input className='form-btn mb-3 mx-2' type="submit" value="Submit" />
-            </form>
+        <div className='body-banner'>
+            <div className="d-flex justify-content-center align-items-center flex-column body-banner-text-container">
+                <div>
+                    <h1 className='text-center fs-1 p-3 fw-bold text-dark' style={{
+                        textShadow: " 0px 1px 7px #6f7070"
+                    }}>Make Another Admin</h1>
+                    <form className='mt-4 text-center d-flex' onSubmit={handleSubmit}>
+                        <input className="form-control" type="email" ref={emailRef} style={{ background: '#dbdbdb', border: '1px solid gray', height: '55px' }} placeholder='E-mail Please' required />
+                        <input className='btn btn-success ms-1 p-3' type="submit" value="Submit" />
+                    </form>
+                </div>
+            </div>
         </div>
     );
 };

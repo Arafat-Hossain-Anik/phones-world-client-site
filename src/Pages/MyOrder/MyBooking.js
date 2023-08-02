@@ -39,7 +39,7 @@ const MyBooking = () => {
                       <Col>
                         <Row>
                           <Col className='booking'>
-                            <button onClick={() => remove(booking._id)}><i className="fas fa-trash"></i> Remove </button>
+                            <button onClick={() => remove(booking._id)}><i className="fas fa-trash"></i> Cancel Order </button>
                           </Col>
                         </Row>
                       </Col>

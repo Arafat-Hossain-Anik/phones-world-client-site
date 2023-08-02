@@ -7,7 +7,7 @@ const UseCart = () => {
     console.log(user);
     const [selectedBooking, setSelectedBooking] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/cart/${uid}`)
+        fetch(`https://phones-world-server-site.onrender.com/cart/${uid}`)
             .then(res => res.json())
             .then(data => {
                 if (data.length) {
@@ -25,7 +25,7 @@ const UseCart = () => {
         if (isHave) {
             alert("Already Booked!! Thanks For Booking......")
         } else {
-            fetch('http://localhost:5000/booking/add', {
+            fetch('https://phones-world-server-site.onrender.com/booking/add', {
                 method: "POST",
                 headers: { "content-type": "application/json" },
                 body: JSON.stringify(dt)
@@ -44,7 +44,7 @@ const UseCart = () => {
         const isConfirm = window.confirm('Are You Sure? Wanna delete?');
         console.log(isConfirm);
         if (isConfirm) {
-            const url = `http://localhost:5000/booking/add/${id}`;
+            const url = `https://phones-world-server-site.onrender.com/booking/add/${id}`;
             console.log(url);
             fetch(url, {
                 method: 'DELETE'

@@ -1,11 +1,38 @@
-.dashboard-header{
-    background-color: rgb(0, 0, 0);
+.dashboard-header {
+    background: #027493;
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
-.dashboard-header a{
+
+.dashboard-header a {
     margin: 10px;
+}
+
+.body-banner {
+    background-image: url('../../../images/banner/admin-banner.jpg');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.body-banner-text-container {
+    color: #000000;
+    height: 100%;
+}
+
+.banner-head {
+    font-size: 50px;
+}
+
+.banner-sub-head {
+    font-size: 30px;
+}
+
+.banner-head,
+.banner-sub-head {
+    font-weight: 600;
 }
