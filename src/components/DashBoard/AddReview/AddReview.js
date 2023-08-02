@@ -23,7 +23,7 @@ const AddReview = () => {
                     <textarea {...register("review")} placeholder='write yours review' />
                     <input {...register("rating")} placeholder='add rating' />
                     <input {...register("img")} placeholder='image url' />
-                    <input className='sub' style={{ background: '#161E54' }} type="submit" />
+                    <input className='btn btn-success' style={{ color: '#fff' }} type="submit" />
                 </form>
             </div>
         </>

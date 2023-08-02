@@ -7,7 +7,11 @@
 .footer-area {
     margin-top: 100px;
     padding: 20px 0;
-    background-color: rgb(41, 41, 41);
+    background: rgba(33, 42, 54, 1);
+}
+
+.single-footer {
+    margin: 0 30px;
 }
 
 .single-footer h4 {

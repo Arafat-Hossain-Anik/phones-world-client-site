@@ -1,7 +1,16 @@
 /* banner heading design */
 .banner-heading {
-    font-size: 56px;
-    line-height: 70px;
+    text-transform: uppercase;
+    /* font-size: 35px; */
+}
+
+.banner-sub-heading {
+    font-size: 14px;
+    /* text-transform: uppercase; */
+    background-color: rgb(252, 201, 2);
+    display: inline;
+    padding: 5px;
+    border-radius: 2px;
 }
 
 /* padding top  */
@@ -11,7 +20,8 @@
 
 .carousel .carousel-item {
     height: 600px;
-    background-color: aqua;
+    /* background: linear-gradient(90deg, rgba(211, 253, 255, 1) 0%, rgba(71, 240, 232, 1) 53%); */
+    background: linear-gradient(90deg, #00C9FF 0%, #a5e7abd3 100%);
 }
 
 .carousel-indicators button {
@@ -20,4 +30,27 @@
     width: 10px !important;
     height: 10px !important;
     background-color: #404040;
+}
+
+.banner-img {
+    height: 550px;
+}
+
+.row {
+    /* justify-content: center !important; */
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .carousel .carousel-item {
+        height: 400px;
+    }
+
+    .row {
+        margin-top: 40%;
+    }
+
+    .banner-img {
+        display: none;
+    }
 }

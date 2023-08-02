@@ -36,7 +36,7 @@ const More = () => {
               </Col>
               <Col className='booking'>
                 <Link to='/form'>
-                  <button onClick={() => localStorage.setItem('orders', service._id)}> Booking Confirm <i className="far fa-check-circle"></i></button>
+                  <button onClick={() => localStorage.setItem('orders', service._id)}> Buy Now <i className="far fa-check-circle"></i></button>
                 </Link>
               </Col><hr />
               <p className="text-center fw-bold">{service.time}</p>

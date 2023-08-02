@@ -7,7 +7,7 @@ const ShowReview = (props) => {
     return (
         <div key={review.id}>
             <div className="col">
-                <div className="card">
+                <div className="card h-100">
                     <div className='text-center mt-2'>
                         <img style={{
                             width: "100px",

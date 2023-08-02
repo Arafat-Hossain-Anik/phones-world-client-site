@@ -1,6 +1,7 @@
-.header{
-    background: rgb(0, 0, 0) ;
+.header {
+    background: rgba(33, 42, 54, 1);
 }
-.header img{
+
+.header img {
     width: 50%;
 }
